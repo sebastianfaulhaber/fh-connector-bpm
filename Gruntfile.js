@@ -46,6 +46,7 @@ module.exports = function(grunt) {
       options: {},
       // environment variables - see https://github.com/jsoverson/grunt-env for more information
       local: {
+        SF_TEST: true,
         FH_USE_LOCAL_DB: true,
         FH_SERVICE_MAP: function() {
           /*
