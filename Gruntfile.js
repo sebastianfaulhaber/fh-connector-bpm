@@ -63,6 +63,9 @@ module.exports = function(grunt) {
       },
       dev: {
         SF_TEST: true
+      },
+      development: {
+        SF_TEST_DEVELOPEMNT: true
       }
     },
     'node-inspector': {
