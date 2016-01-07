@@ -61,10 +61,7 @@ module.exports = function(grunt) {
           return JSON.stringify(serviceMap);
         }
       },
-      dev: {
-        SF_TEST: true
-      },
-      development: {
+      Development: {
         SF_TEST_DEVELOPEMNT: true
       }
     },
