@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-module.exports = function(grunt) {
-  require('time-grunt')(grunt);
+module.exports = function (grunt) {
+  require('time-grunt')(grunt)
   // Project Configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -46,8 +46,14 @@ module.exports = function(grunt) {
       options: {},
       // environment variables - see https://github.com/jsoverson/grunt-env for more information
       local: {
+        BPM_URI_HOSTNAME: '209.132.179.9',
+        BPM_URI_PORT: '8080',
+        BPM_AUTH_USERNAME: 'erics',
+        BPM_AUTH_PASSWORD: 'bpmsuite1!',
+        BPM_PROCESS_DEPLOYMENTID: 'test:stp:1.0',
+        BPM_PROCESS_PROCESSDEFID: 'stp.my-process',
         FH_USE_LOCAL_DB: true,
-        FH_SERVICE_MAP: function() {
+        FH_SERVICE_MAP: function () {
           /*
            * Define the mappings for your services here - for local development.
            * You must provide a mapping for each service you wish to access
@@ -57,12 +63,9 @@ module.exports = function(grunt) {
           var serviceMap = {
             'SERVICE_GUID_1': 'http://127.0.0.1:8010',
             'SERVICE_GUID_2': 'https://host-and-path-to-service'
-          };
-          return JSON.stringify(serviceMap);
+          }
+          return JSON.stringify(serviceMap)
         }
-      },
-      Development: {
-        SF_TEST_DEVELOPEMNT: true
       }
     },
     'node-inspector': {
@@ -139,29 +142,28 @@ module.exports = function(grunt) {
       options: {
         jshintrc: true
       }
-    },
-  });
+    }
+  })
 
   // Load NPM tasks
   require('load-grunt-tasks')(grunt, {
     scope: 'devDependencies'
-  });
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  })
+  grunt.loadNpmTasks('grunt-contrib-jshint')
 
   // Testing tasks
-  grunt.registerTask('test', ['jshint', 'shell:unit', 'shell:accept']);
-  grunt.registerTask('unit', ['jshint', 'shell:unit']);
-  grunt.registerTask('accept', ['env:local', 'shell:accept']);
+  grunt.registerTask('test', ['jshint', 'shell:unit', 'shell:accept'])
+  grunt.registerTask('unit', ['jshint', 'shell:unit'])
+  grunt.registerTask('accept', ['env:local', 'shell:accept'])
 
   // Coverate tasks
-  grunt.registerTask('coverage', ['shell:coverage_unit', 'shell:coverage_accept']);
-  grunt.registerTask('coverage-unit', ['shell:coverage_unit']);
-  grunt.registerTask('coverage-accept', ['env:local', 'shell:coverage_accept']);
+  grunt.registerTask('coverage', ['shell:coverage_unit', 'shell:coverage_accept'])
+  grunt.registerTask('coverage-unit', ['shell:coverage_unit'])
+  grunt.registerTask('coverage-accept', ['env:local', 'shell:coverage_accept'])
 
+  grunt.registerTask('analysis', ['plato:src', 'open:platoReport'])
 
-  grunt.registerTask('analysis', ['plato:src', 'open:platoReport']);
-
-  grunt.registerTask('serve', ['env:local', 'concurrent:serve']);
-  grunt.registerTask('debug', ['env:local', 'concurrent:debug']);
-  grunt.registerTask('default', ['serve']);
-};
+  grunt.registerTask('serve', ['env:local', 'concurrent:serve'])
+  grunt.registerTask('debug', ['env:local', 'concurrent:debug'])
+  grunt.registerTask('default', ['serve'])
+}
