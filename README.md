@@ -12,7 +12,7 @@ The following environment variables need to be defined:
 
 # Group BPM API
 
-# bpm [/bpm/startProcess]
+# Start process [/bpm/startProcess]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
@@ -40,7 +40,7 @@ Starts a new process instance from the given template identified by "process-id"
               "event-types":[]
             }
 
-# bpm [/bpm/getProcessInstance]
+# Get process instance [/bpm/getProcessInstance]
 
 ## getProcessInstance [POST]
 
