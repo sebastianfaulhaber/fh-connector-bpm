@@ -20,6 +20,7 @@
     "grunt-shell": "^0.7.0",
     "istanbul": "0.2.7",
     "load-grunt-tasks": "^0.4.0",
+    "logfile-grunt": "^0.2.0",
     "mocha": "^2.1.0",
     "proxyquire": "0.5.3",
     "should": "2.1.1",

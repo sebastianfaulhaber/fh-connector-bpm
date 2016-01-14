@@ -23,6 +23,8 @@ module.exports = function (grunt) {
       dev: {
         script: 'application.js',
         options: {
+          stdout: true,
+          stderr: true,
           args: [],
           ignore: ['public/**'],
           ext: 'js,html',
