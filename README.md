@@ -49,7 +49,7 @@ Gets basic information about a certain process instance
 + Request (application/json)
     + Body
             {
-              "procInstId": "1",
+              "procInstId": "1"
             }
 
 + Response 200 (application/json)
