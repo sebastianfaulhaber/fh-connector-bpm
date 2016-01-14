@@ -40,7 +40,9 @@ Starts a new process instance from the given template identified by "process-id"
               "event-types":[]
             }
 
-## /bpm/getProcessInstance [POST]
+# bpm [/bpm/getProcessInstance]
+
+## getProcessInstance [POST]
 
 Gets basic information about a certain process instance
 
