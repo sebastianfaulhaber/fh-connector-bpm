@@ -16,7 +16,7 @@ The following environment variables need to be defined:
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
-## /bpm/startProcess [POST]
+## startProcess [POST]
 
 Starts a new process instance from the given template identified by "process-id".
 
