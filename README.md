@@ -12,7 +12,7 @@ The following environment variables need to be defined:
 
 # Group BPM API
 
-# bpm [/bpm]
+# bpm [/bpm/startProcess]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
