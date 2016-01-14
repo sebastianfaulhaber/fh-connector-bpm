@@ -3,7 +3,7 @@
 This is a BPM mBaaS service for working with the REST API of JBoss BPM Suite V6.x (https://docs.jboss.org/jbpm/v6.3/userguide/ch17.html).
 
 The following environment variables need to be defined:
-- BPM_URI_HOSTNAME = mybpmserver.example.com
+- "BPM_URI_HOSTNAME" = mybpmserver.example.com
 - BPM_URI_PORT = 8080
 - BPM_AUTH_USERNAME = username
 - BPM_AUTH_PASSWORD = mypassword
