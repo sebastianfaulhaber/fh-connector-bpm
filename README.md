@@ -84,7 +84,7 @@ VERY IMPORTANT: The content type of the request must be set: "Content-Type: appl
 
 ## loadTasks [POST]
 
-Gets all the task
+Gets all the task.
 Username, password, IP and port are optional values.
 
 + Request (application/json)
@@ -129,4 +129,155 @@ Username, password, IP and port are optional values.
                 }],
               "pageNumber":null,
               "pageSize":null
+            }
+# Load task content [/bpm/loadTaskContent]
+
+VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
+
+## loadTaskContent [POST]
+
+Gets the content of a specific task. TASKID is required!
+Username, password, IP and port are optional values.
+
++ Request (application/json)
+    + Body
+            {
+              "params":{
+                "username": "username",
+                "password": "password",
+                "ip": "Your BPM IP",
+                "port": "Your BPM Port",
+                "taskId": "ID"
+              }
+            }
+
++ Response 200 (application/json)
+    + Body
+            {
+              "id":41,
+              "content":"rO0ABXoAAAG/CgYIBhADGABK4gEIABJIb3JnLmRyb29scy5jb3JlLm1hcnNoYWxsaW5nLmltcGwuU2VyaWFsaXphYmxlUGxhY2Vob2xkZXJSZXNvbHZlclN0cmF0ZWd5GpMBrO0ABXNyABNqYXZhLnV0aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAAKdwQAAAAKdAAEdGVzdHQABHRlc3R0AAR0ZXN0dAAEdGVzdHQABHRlc3R0AAR0ZXN0dAAEdHJ1ZXQADUhhbmRsZVByb2JsZW10AAR1c2VydAAOaGFuZGxlX3Byb2JsZW14Us8BChMKCXRpbWVzdGFtcBAAGgQAAAAAChYKDGVycm9yTWVzc2FnZRAAGgQAAAABChQKCmRldmljZVR5cGUQABoEAAAAAgoSCghkZXZpY2VJRBAAGgQAAAADChMKCWVycm9yQ29kZRAAGgQAAAAEChEKB3BheWxvYWQQABoEAAAABQoTCglTa2lwcGFibGUQABoEAAAABgoSCghUYXNrTmFtZRAAGgQAAAAHChEKB0dyb3VwSWQQABoEAAAACAoSCghOb2RlTmFtZRAAGgQAAAAJ",
+              "contentMap":{
+                "errorMessage":"test",
+                "timestamp":"test",
+                "deviceType":"test",
+                "deviceID":"test",
+                "errorCode":"test",
+                "payload":"test",
+                "Skippable":"true",
+                "TaskName":"HandleProblem",
+                "GroupId":"user",
+                "NodeName":"handle_problem"
+                }
+              }
+# Claim task [/bpm/claimTask]
+
+VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
+
+## claimTask [POST]
+
+Claims a task. TASKID is required!
+Username, password, IP and port are optional values.
+
++ Request (application/json)
+    + Body
+            {
+              "params":{
+                "username": "username",
+                "password": "password",
+                "ip": "Your BPM IP",
+                "port": "Your BPM Port",
+                "taskId": "ID"
+              }
+            }
+
++ Response 200 (application/json)
+    + Body
+            {
+              "status":"SUCCESS",
+              "url":"/business-central/rest/task/15/claim",
+              "message":null
+            }
+# Complete task [/bpm/completeTask]
+
+VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
+
+## completeTask [POST]
+
+Completes a task. TASKID is required!
+Username, password, IP and port are optional values.
+
++ Request (application/json)
+    + Body
+            {
+              "params":{
+                "username": "username",
+                "password": "password",
+                "ip": "Your BPM IP",
+                "port": "Your BPM Port",
+                "taskId": "ID"
+              }
+            }
+
++ Response 200 (application/json)
+    + Body
+            {
+              "status":"SUCCESS",
+              "url":"/business-central/rest/task/15/complete",
+              "message":null
+            }
+# Release task [/bpm/releaseTask]
+
+VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
+
+## releaseTask [POST]
+
+Completes a task. TASKID is required!
+Username, password, IP and port are optional values.
+
++ Request (application/json)
+    + Body
+            {
+              "params":{
+                "username": "username",
+                "password": "password",
+                "ip": "Your BPM IP",
+                "port": "Your BPM Port",
+                "taskId": "ID"
+              }
+            }
+
++ Response 200 (application/json)
+    + Body
+            {
+              "status":"SUCCESS",
+              "url":"/business-central/rest/task/15/release",
+              "message":null
+            }
+# Release task [/bpm/startTask]
+
+VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
+
+## startTask [POST]
+
+Starts a task. TASKID is required!
+Username, password, IP and port are optional values.
+
++ Request (application/json)
+    + Body
+            {
+              "params":{
+                "username": "username",
+                "password": "password",
+                "ip": "Your BPM IP",
+                "port": "Your BPM Port",
+                "taskId": "ID"
+              }
+            }
+
++ Response 200 (application/json)
+    + Body
+            {
+              "status":"SUCCESS",
+              "url":"/business-central/rest/task/15/start",
+              "message":null
             }
