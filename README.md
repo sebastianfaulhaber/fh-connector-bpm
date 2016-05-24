@@ -42,7 +42,7 @@ Starts a new process instance from the given template identified by "process-id"
 
 # Get process instance [/bpm/getProcessInstance]
 
-## getProcessInstance [POST]
+## getProcessInstance [GET]
 
 Gets basic information about a certain process instance
 
@@ -74,10 +74,9 @@ Gets basic information about a certain process instance
             }
 # Get tasks [/bpm/loadTasks]
 
-## loadTasks [POST]
+## loadTasks [GET]
     Gets all the tasks
-
-            + Request (application/json)
+          + Request (application/json)
                 + Body
                         {
                           "username": "1",
