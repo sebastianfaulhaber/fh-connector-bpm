@@ -90,10 +90,12 @@ Username, password, IP and port are optional values.
 + Request (application/json)
     + Body
             {
-              "username": "username",
-              "password": "password",
-              "ip": "Your BPM IP",
-              "port": "Your BPM Port",
+              "params":{
+                "username": "username",
+                "password": "password",
+                "ip": "Your BPM IP",
+                "port": "Your BPM Port"
+              }
             }
 
 + Response 200 (application/json)
