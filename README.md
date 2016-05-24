@@ -2,11 +2,15 @@
 
 This is a BPM mBaaS service for working with the REST API of JBoss BPM Suite V6.x (https://docs.jboss.org/jbpm/v6.3/userguide/ch17.html).
 
-The following environment variables need to be defined:
+The following environment variables need to be defined to create a connection to your JBoss BPM Suite.
+Alternatively you can leave them empty and define a connection in the your App.
+But note! This mBaaS will always take the environment variables, if they are defined.
 - BPM\_URI\_HOSTNAME = mybpmserver.example.com
 - BPM\_URI\_PORT = 8080
 - BPM\_AUTH\_USERNAME = username
 - BPM\_AUTH\_PASSWORD = mypassword
+
+By setting the following environment variables you define a process which you want to interact with.
 - BPM\_PROCESS\_DEPLOYMENTID = e.g. test:stp:1.0 (see https://docs.jboss.org/jbpm/v6.3/userguide/ch17.html#remote.rest.deployment)
 - BPM\_PROCESS\_PROCESSDEFID = e.g. stp.my-process
 
@@ -42,7 +46,9 @@ Starts a new process instance from the given template identified by "process-id"
 
 # Get process instance [/bpm/getProcessInstance]
 
-## getProcessInstance [GET]
+VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
+
+## getProcessInstance [POST]
 
 Gets basic information about a certain process instance
 
@@ -72,38 +78,53 @@ Gets basic information about a certain process instance
                   "event-types":[]
                 }
             }
-# Get tasks [/bpm/loadTasks]
+# Load tasks [/bpm/loadTasks]
 
-## loadTasks [GET]
+VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
+
+## loadTasks [POST]
 
 Gets all the task
+Username, password, IP and port are optional values.
 
 + Request (application/json)
     + Body
             {
-              "username": "1",
-              "password": "1",
-              "ip": "ip",
-              "port": "port"
+              "username": "username",
+              "password": "password",
+              "ip": "Your BPM IP",
+              "port": "Your BPM Port",
             }
 
 + Response 200 (application/json)
     + Body
             {
-              "status":"SUCCESS",
-              "url":"/business-central/rest/runtime/test:stp:1.0/withvars/process/instance/2",
-              "variables":
-                {
-                  "processInput01": "This is my value.",
-                  "processInput02": "This is another value..."
-                  "initiator":"username"
-                  },
-                "processInstance":
-                  {
-                    "id":2,
-                    "state":1,
-                    "parentProcessInstanceId":0,
-                    "process-id":"stp.my-process",
-                    "event-types":[]
-                  }
-              }
+              "status":null,
+              "url":null,
+              "index":null,
+              "commandName":null,
+              "taskSummaryList":[{
+                "@class":"org.kie.services.client.serialization.jaxb.impl.task.JaxbTaskSummary",
+                "id":15,
+                "name":"handle_problem",
+                "subject":"",
+                "description":"",
+                "status":"Ready",
+                "priority":0,
+                "skipable":true,
+                "actualOwnerId":null,
+                "createdById":null,
+                "createdOn":1463068007279,
+                "activationTime":1463068007279,
+                "expirationTime":null,
+                "processInstanceId":15,
+                "processId":"IoT_Human_Task.low_voltage",
+                "processSessionId":2,
+                "deploymentId":"com.redhat.demo.iot.datacenter:HumanTask:1.0",
+                "quickTaskSummary":false,
+                "parentId":-1,
+                "potentialOwners":null
+                }],
+              "pageNumber":null,
+              "pageSize":null
+            }
