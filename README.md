@@ -253,7 +253,7 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/release",
               "message":null
             }
-# Release task [/bpm/startTask]
+# Start task [/bpm/startTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
