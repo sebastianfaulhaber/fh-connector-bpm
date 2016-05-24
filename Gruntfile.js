@@ -48,12 +48,12 @@ module.exports = function (grunt) {
       options: {},
       // environment variables - see https://github.com/jsoverson/grunt-env for more information
       local: {
-        BPM_URI_HOSTNAME: '209.132.179.9',
-        BPM_URI_PORT: '8080',
-        BPM_AUTH_USERNAME: 'erics',
-        BPM_AUTH_PASSWORD: 'bpmsuite1!',
         BPM_PROCESS_DEPLOYMENTID: 'com.redhat.demo.iot.datacenter:HumanTask:1.0',
         BPM_PROCESS_PROCESSDEFID: 'IoT_Human_Task.low_voltage',
+        BPM_USERNAME:'',
+        BPM_PASSWORD:'',
+        BPM_IP:'',
+        BPM_PORT:'',
         FH_USE_LOCAL_DB: true,
         FH_SERVICE_MAP: function () {
           /*
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
            * or a remote instance.
            */
           var serviceMap = {
-            'rqk2poijk5izmnzogliihzku': 'http://127.0.0.1:8001',
+            '3m3gujrwux6jo6fjx44npd35': 'http://127.0.0.1:8001',
             'SERVICE_GUID_2': 'https://host-and-path-to-service'
           }
           return JSON.stringify(serviceMap)
