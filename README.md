@@ -75,33 +75,35 @@ Gets basic information about a certain process instance
 # Get tasks [/bpm/loadTasks]
 
 ## loadTasks [GET]
-    Gets all the tasks
-          + Request (application/json)
-                + Body
-                        {
-                          "username": "1",
-                          "password": "1",
-                          "ip": "ip",
-                          "port": "port"
-                        }
 
-            + Response 200 (application/json)
-                + Body
-                        {
-                          "status":"SUCCESS",
-                          "url":"/business-central/rest/runtime/test:stp:1.0/withvars/process/instance/2",
-                          "variables":
-                            {
-                              "processInput01": "This is my value.",
-                              "processInput02": "This is another value..."
-                              "initiator":"username"
-                            },
-                          "processInstance":
-                            {
-                              "id":2,
-                              "state":1,
-                              "parentProcessInstanceId":0,
-                              "process-id":"stp.my-process",
-                              "event-types":[]
-                            }
-                        }
+Gets all the task
+
++ Request (application/json)
+    + Body
+            {
+              "username": "1",
+              "password": "1",
+              "ip": "ip",
+              "port": "port"
+            }
+
++ Response 200 (application/json)
+    + Body
+            {
+              "status":"SUCCESS",
+              "url":"/business-central/rest/runtime/test:stp:1.0/withvars/process/instance/2",
+              "variables":
+                {
+                  "processInput01": "This is my value.",
+                  "processInput02": "This is another value..."
+                  "initiator":"username"
+                  },
+                "processInstance":
+                  {
+                    "id":2,
+                    "state":1,
+                    "parentProcessInstanceId":0,
+                    "process-id":"stp.my-process",
+                    "event-types":[]
+                  }
+              }
