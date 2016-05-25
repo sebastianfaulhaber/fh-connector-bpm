@@ -3,7 +3,7 @@
 This is a BPM mBaaS service for working with the REST API of JBoss BPM Suite V6.x (https://docs.jboss.org/jbpm/v6.3/userguide/ch17.html).
 
 The following environment variables need to be defined to create a connection to your JBoss BPM Suite.
-Alternatively you can leave them empty and define a connection in the your App.
+Alternatively you can leave them empty and define a connection in your mobile App.
 But note! This mBaaS will always take the environment variables, if they are defined.
 - BPM\_URI\_HOSTNAME = mybpmserver.example.com
 - BPM\_URI\_PORT = 8080
