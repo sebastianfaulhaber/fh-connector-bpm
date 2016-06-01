@@ -14,7 +14,7 @@ By setting the following environment variables you define a process which you wa
 - BPM\_PROCESS\_DEPLOYMENTID = e.g. test:stp:1.0 (see https://docs.jboss.org/jbpm/v6.3/userguide/ch17.html#remote.rest.deployment)
 - BPM\_PROCESS\_PROCESSDEFID = e.g. stp.my-process
 
-# Group BPM API
+# Group Process Management
 
 # Start process [/bpm/startProcess]
 
@@ -78,6 +78,8 @@ Gets basic information about a certain process instance
                   "event-types":[]
                 }
             }
+# Group Task Management
+
 # Load tasks [/bpm/loadTasks]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
