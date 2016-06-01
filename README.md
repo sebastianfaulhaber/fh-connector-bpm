@@ -14,7 +14,7 @@ By setting the following environment variables you define a process which you wa
 - BPM\_PROCESS\_DEPLOYMENTID = e.g. test:stp:1.0 (see https://docs.jboss.org/jbpm/v6.3/userguide/ch17.html#remote.rest.deployment)
 - BPM\_PROCESS\_PROCESSDEFID = e.g. stp.my-process
 
-# Group Process Management
+# Group BPM API
 
 # Start process [/bpm/startProcess]
 
@@ -79,8 +79,6 @@ Gets basic information about a certain process instance
                 }
             }
 
-# Group Task Management
-
 # Load tasks [/bpm/loadTasks]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
@@ -133,7 +131,6 @@ Username, password, IP and port are optional values.
               "pageNumber":null,
               "pageSize":null
             }
-
 # Load task content [/bpm/loadTaskContent]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
@@ -173,7 +170,6 @@ Username, password, IP and port are optional values.
                 "NodeName":"handle_problem"
                 }
               }
-
 # Claim task [/bpm/claimTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
@@ -202,7 +198,6 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/claim",
               "message":null
             }
-
 # Complete task [/bpm/completeTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
@@ -231,7 +226,6 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/complete",
               "message":null
             }
-
 # Release task [/bpm/releaseTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
@@ -260,7 +254,6 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/release",
               "message":null
             }
-
 # Start task [/bpm/startTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
