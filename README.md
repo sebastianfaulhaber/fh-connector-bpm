@@ -16,7 +16,7 @@ By setting the following environment variables you define a process which you wa
 
 # Group BPM API
 
-# Start process [/bpm/startProcess]
+# PROCESS MANAGAMENT: Start process [/bpm/startProcess]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
@@ -44,7 +44,7 @@ Starts a new process instance from the given template identified by "process-id"
               "event-types":[]
             }
 
-# Get process instance [/bpm/getProcessInstance]
+# PROCESS MANAGAMENT: Get process instance [/bpm/getProcessInstance]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
@@ -79,7 +79,7 @@ Gets basic information about a certain process instance
                 }
             }
 
-# Load tasks [/bpm/loadTasks]
+# TASK MANAGAMENT: Load tasks [/bpm/loadTasks]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
@@ -131,7 +131,7 @@ Username, password, IP and port are optional values.
               "pageNumber":null,
               "pageSize":null
             }
-# Load task content [/bpm/loadTaskContent]
+# TASK MANAGAMENT: Load task content [/bpm/loadTaskContent]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
@@ -170,7 +170,7 @@ Username, password, IP and port are optional values.
                 "NodeName":"handle_problem"
                 }
               }
-# Claim task [/bpm/claimTask]
+# TASK MANAGAMENT: Claim task [/bpm/claimTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
@@ -198,7 +198,7 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/claim",
               "message":null
             }
-# Complete task [/bpm/completeTask]
+# TASK MANAGAMENT: Complete task [/bpm/completeTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
@@ -226,7 +226,7 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/complete",
               "message":null
             }
-# Release task [/bpm/releaseTask]
+# TASK MANAGAMENT: Release task [/bpm/releaseTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
@@ -254,7 +254,7 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/release",
               "message":null
             }
-# Start task [/bpm/startTask]
+# TASK MANAGAMENT: Start task [/bpm/startTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
 
