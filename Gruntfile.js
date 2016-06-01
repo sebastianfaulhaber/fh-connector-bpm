@@ -48,12 +48,12 @@ module.exports = function (grunt) {
       options: {},
       // environment variables - see https://github.com/jsoverson/grunt-env for more information
       local: {
-        BPM_PROCESS_DEPLOYMENTID: 'com.redhat.demo.iot.datacenter:HumanTask:1.0',
-        BPM_PROCESS_PROCESSDEFID: 'IoT_Human_Task.low_voltage',
-        BPM_USERNAME:'',
-        BPM_PASSWORD:'',
-        BPM_IP:'',
-        BPM_PORT:'',
+        BPM_PROCESS_DEPLOYMENTID: '',
+        BPM_PROCESS_PROCESSDEFID: '',
+        BPM_AUTH_USERNAME:'',
+        BPM_AUTH_PASSWORD:'',
+        BPM_URI_HOSTNAME:'',
+        BPM_URI_PORT:'',
         FH_USE_LOCAL_DB: true,
         FH_SERVICE_MAP: function () {
           /*
