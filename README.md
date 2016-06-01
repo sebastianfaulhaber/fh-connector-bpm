@@ -78,7 +78,7 @@ Gets basic information about a certain process instance
                   "event-types":[]
                 }
             }
-            
+
 # Group Task Management
 
 # Load tasks [/bpm/loadTasks]
