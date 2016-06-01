@@ -133,6 +133,7 @@ Username, password, IP and port are optional values.
               "pageNumber":null,
               "pageSize":null
             }
+
 # Load task content [/bpm/loadTaskContent]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
@@ -172,6 +173,7 @@ Username, password, IP and port are optional values.
                 "NodeName":"handle_problem"
                 }
               }
+
 # Claim task [/bpm/claimTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
@@ -200,6 +202,7 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/claim",
               "message":null
             }
+
 # Complete task [/bpm/completeTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
@@ -228,6 +231,7 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/complete",
               "message":null
             }
+
 # Release task [/bpm/releaseTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
@@ -256,6 +260,7 @@ Username, password, IP and port are optional values.
               "url":"/business-central/rest/task/15/release",
               "message":null
             }
+
 # Start task [/bpm/startTask]
 
 VERY IMPORTANT: The content type of the request must be set: "Content-Type: application/json"
