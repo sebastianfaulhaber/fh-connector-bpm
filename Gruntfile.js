@@ -48,12 +48,12 @@ module.exports = function (grunt) {
       options: {},
       // environment variables - see https://github.com/jsoverson/grunt-env for more information
       local: {
-        BPM_PROCESS_DEPLOYMENTID: '',
-        BPM_PROCESS_PROCESSDEFID: '',
-        BPM_AUTH_USERNAME:'',
-        BPM_AUTH_PASSWORD:'',
-        BPM_URI_HOSTNAME:'',
-        BPM_URI_PORT:'',
+        BPM_PROCESS_DEPLOYMENTID: 'test:stp:1.0',
+        BPM_PROCESS_PROCESSDEFID: 'stp.my-process',
+        BPM_AUTH_USERNAME:'erics',
+        BPM_AUTH_PASSWORD:'bpmsuite1!',
+        BPM_URI_HOSTNAME:'209.132.179.9',
+        BPM_URI_PORT:'8080',
         FH_USE_LOCAL_DB: true,
         FH_SERVICE_MAP: function () {
           /*
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
            * or a remote instance.
            */
           var serviceMap = {
-            '3m3gujrwux6jo6fjx44npd35': 'http://127.0.0.1:8001',
+            'wbyyx52jcku3ynnqywa666ry': 'http://127.0.0.1:8001',
             'SERVICE_GUID_2': 'https://host-and-path-to-service'
           }
           return JSON.stringify(serviceMap)
